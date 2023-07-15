@@ -1,0 +1,209 @@
+:root {
+    --primary-font: 'Nunito', sans-serif;
+    --primary-color: #d64933;
+    --secondary-color: #92dce5;
+    --light-color: #eee5e9;
+    --dark-color: #2b303a;
+    --grey-color: #7c7c7c;
+    --darker-color: #191b1f;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--primary-font);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+#top-navigation {
+    text-align: center;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--darker-color);
+}
+
+#top-navigation .logo {
+    font-size: 2rem;
+    letter-spacing: 0.125rem;
+}
+
+#top-navigation .links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-navigation .links ul li a {
+    text-decoration: none;
+    color: var(--light-color);
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+#top-navigation .links ul li a:hover {
+    color: var(--primary-color);
+}
+
+#main-section {
+    display: flex;
+}
+
+#main-section #account-info {
+    flex: 1;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#main-section #account-info #account .user-profile {
+    margin: 0 auto;
+}
+
+#main-section #feed {
+    flex: 4;
+}
+
+#main-section .feed-section {
+    padding: 2rem 1rem;
+}
+
+#main-section #feed #network {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#main-section #feed #results-number {
+    margin-bottom: 1rem;
+}
+
+#main-section #feed #network-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+#main-section #feed #network-pagination .page-number {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 0.125rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#main-section #feed #network-pagination .page-number.active {
+    background-color: var(--secondary-color);
+    color: var(--darker-color);
+}
+
+#footer {
+    text-align: center;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.125rem;
+    line-height: 2rem;
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.user-profile {
+    background-color: var(--darker-color);
+    max-width: 280px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.user-profile .subscription-plan {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.user-profile .subscription-plan::after {
+    content: '';
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.user-profile .subscription-plan.active::after {
+    background-color: green;
+}
+
+.user-profile .subscription-plan.blocked::after {
+    background-color: red;
+}
+
+.user-profile .subscription-plan.pending::after {
+    background-color: yellow;
+}
+
+.user-profile .subscription-plan.idle::after {
+    background-color: grey;
+}
+
+.user-profile .avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-profile .personal-data {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.user-profile .personal-data .full-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-profile .personal-data .full-name span {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.user-profile .personal-data .job-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.user-profile .popular-skill {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0.5rem auto 0;
+}
